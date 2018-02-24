@@ -29,7 +29,7 @@ namespace parameters {
   const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 30;
 
   // MONEY_SUPPLY - total number coins to be generated
-  const uint64_t MONEY_SUPPLY                                  = UINT64_C(858986905600000000);
+  const uint64_t MONEY_SUPPLY                                  = UINT64_C(91700971000);
   const uint32_t MANDATORY_TRANSACTION                         = 0;
   const uint32_t KILL_HEIGHT                                   = 0;
   const uint64_t TAIL_EMISSION_REWARD                          = 0;
@@ -40,8 +40,8 @@ namespace parameters {
   static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
   const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 0.1;
-  const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 10000; //size of block (bytes) after which reward for block calculated using block size
-  const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
+  const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 4500000; //size of block (bytes) after which reward for block calculated using block size
+  const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 4500000;
   const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
   const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 6;
   // COIN - number of smallest units in one coin
@@ -104,13 +104,13 @@ namespace parameters {
   } // parameters
 
   const uint64_t START_BLOCK_REWARD                            = (UINT64_C(10) * parameters::POINT);
-  const uint64_t ICO_BLOCK_REWARD	                             = (UINT64_C(50201467440) * parameters::COIN); // 50.2 billion ICO
+  const uint64_t ICO_BLOCK_REWARD	                             = (UINT64_C(430201497) * parameters::COIN); // 50.2 billion ICO
   const uint64_t MAX_BLOCK_REWARD                              = (UINT64_C(2) * parameters::COIN);
   const uint64_t REWARD_INCREASE_INTERVAL                      = (UINT64_C(2640));
 
 
-const char     CRYPTONOTE_NAME[]                             = "Mushi";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001904e029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121013f10b20e46406abdcedb02efdce78bc954cff022b67ebab10a8b7eec1954e74e";
+const char     CRYPTONOTE_NAME[]                             = "Tenra";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "";
 const uint32_t GENESIS_NONCE                                 = 70;
 const uint64_t GENESIS_TIMESTAMP                             = 1515479625;
 
@@ -125,8 +125,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  500;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              = 17236;
-const int      RPC_DEFAULT_PORT                              = 18236;
+const int      P2P_DEFAULT_PORT                              = 19997;
+const int      RPC_DEFAULT_PORT                              = 19097;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
@@ -144,8 +144,8 @@ const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          //
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115";
 
 const std::initializer_list<const char*> SEED_NODES = {
-   "194.135.91.245:17236",
-   "80.208.228.138:17236"
+   "45.32.149.112:19997",
+   "198.13.56.79:19997"
 };
 
 struct CheckpointData {
@@ -159,9 +159,11 @@ __attribute__((unused))
 
 // You may add here other checkpoints using the following format:
 // {<block height>, "<block hash>"},
+
 const std::initializer_list<CheckpointData> CHECKPOINTS = {
-    //{ 1, "cbce7c37dbad257d29a3bfa93ec1f7b92434b9b806d40d01cb04d0ad2e451735" },
+    { 1, "[checkpoint block see on checkpoint list]" },
 };
+  
 
 } // CryptoNote
 
