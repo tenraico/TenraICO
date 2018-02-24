@@ -110,7 +110,7 @@ namespace parameters {
 
 
 const char     CRYPTONOTE_NAME[]                             = "Tenra";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff0001904e029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121011d7e85837e2bd465fcf5a6e5d605add4f737e17d1d3244b699a22d9314dc971b";
 const uint32_t GENESIS_NONCE                                 = 70;
 const uint64_t GENESIS_TIMESTAMP                             = 1515479625;
 
