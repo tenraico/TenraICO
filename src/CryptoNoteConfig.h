@@ -104,7 +104,7 @@ namespace parameters {
   } // parameters
 
   const uint64_t START_BLOCK_REWARD                            = (UINT64_C(10) * parameters::POINT);
-  const uint64_t ICO_BLOCK_REWARD	                             = (UINT64_C(502014674) * parameters::COIN); // 50.2 billion ICO
+  const uint64_t ICO_BLOCK_REWARD	                             = (UINT64_C(500000) * parameters::COIN); // 50.2 billion ICO
   const uint64_t MAX_BLOCK_REWARD                              = (UINT64_C(2) * parameters::COIN);
   const uint64_t REWARD_INCREASE_INTERVAL                      = (UINT64_C(2640));
 
